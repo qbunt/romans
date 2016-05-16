@@ -34,14 +34,14 @@ function deromanize(romanStr) {
     var arabic = 0;
     var iteration = romanString.length;
     while(iteration--){
-        if ( roman_map[romanString[iteration]] < roman_map[romanString[iteration+1]] ){
-            arabic -= roman_map[romanString[iteration]];
+        var cumulative = roman_map[romanString[iteration]];
+        if ( cumulative < roman_map[romanString[iteration+1]] ){
+            arabic -= cumulative;
         } else {
-            arabic += roman_map[romanString[iteration]];
+            arabic += cumulative;
         }
     }
     console.timeEnd('arabicize:');
     return arabic;
 }
 deriveCollections();
-console.log(deromanize("MMMCDXXIII"));
