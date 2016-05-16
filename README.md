@@ -7,6 +7,6 @@ A work-in-progress lib for converting from decimal notation to roman numerals an
 returns:
 `CDLIV`
 
-`deromanize('CDLIV')
+`deromanize('CDLIV')`
 returns:
 `454`
