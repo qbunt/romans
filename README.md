@@ -5,7 +5,7 @@ A work-in-progress lib for converting from decimal notation to roman numerals an
 
 `romanize(454)`
 returns:
-`CDLIV`
+`"CDLIV"`
 
 `deromanize('CDLIV')`
 returns:
