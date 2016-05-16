@@ -19,17 +19,21 @@ describe('check for parity on input & output', function () {
 describe('ensure formatting of data structures is sound', function () {
    it("should contain only characters", function () {
        var myValues = roman.allChars;
-       for (var i = 0; i < myValues.length; i++) {
-           var value = myValues[i];
-            expect(typeof value).toBe("string");
-       }
+       expect(validateForType(myValues, 'string')).toBeTruthy()
    });
     
     it("should contain only numbers", function () {
         var myValues = roman.allNumerals;
-        for (var i = 0; i < myValues.length; i++) {
-            var value = myValues[i];
-            expect(typeof value).toBe("number");
-        }
+        expect(validateForType(myValues, 'number')).toBeTruthy()
     })
 });
+
+function validateForType(arrayToCheck, expectedType) {
+    for (var i = 0; i < arrayToCheck.length; i++) {
+        var value = arrayToCheck[i];
+        if(typeof value !== expectedType){
+            return false;
+        }
+    }
+    return true;
+}
