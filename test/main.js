@@ -15,3 +15,21 @@ describe('check for parity on input & output', function () {
         }
     });
 });
+
+describe('ensure formatting of data structures is sound', function () {
+   it("should contain only characters", function () {
+       var myValues = roman.allChars;
+       for (var i = 0; i < myValues.length; i++) {
+           var value = myValues[i];
+            expect(typeof value).toBe("string");
+       }
+   });
+    
+    it("should contain only numbers", function () {
+        var myValues = roman.allNumerals;
+        for (var i = 0; i < myValues.length; i++) {
+            var value = myValues[i];
+            expect(typeof value).toBe("number");
+        }
+    })
+});

@@ -19,6 +19,7 @@ var roman = (function(){
         }
     }
 
+
     function romanize(decimal) {
         console.time('roman:');
         var roman = '';
@@ -52,6 +53,8 @@ var roman = (function(){
 
     return {
         deromanize: deromanize,
-        romanize: romanize
+        romanize: romanize,
+        allChars: allChars,
+        allNumerals: allNumerals
     }
 })();
