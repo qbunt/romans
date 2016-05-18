@@ -19,9 +19,12 @@ var roman = (function(){
         }
     }
 
-
+    /**
+     * takes in a floating point number, returns a roman numeral string
+     * @param decimal
+     * @returns {string}
+     */
     function romanize(decimal) {
-        console.time('roman:');
         var roman = '';
         for (var i = 0; i < allChars.length; i++) {
             while(decimal >= allNumerals[i]){
@@ -29,12 +32,10 @@ var roman = (function(){
                 roman += allChars[i];
             }
         }
-        console.timeEnd('roman:');
         return roman;
     }
 
     function deromanize(romanStr) {
-        console.time('arabicize:');
         var romanString = romanStr.toUpperCase();
         var arabic = 0;
         var iteration = romanString.length;
@@ -46,10 +47,15 @@ var roman = (function(){
                 arabic += cumulative;
             }
         }
-        console.timeEnd('arabicize:');
         return arabic;
     }
-    deriveCollections();
+
+    function init() {
+        deriveCollections();
+        console.info('started Romanize');
+    }
+
+    init();
 
     return {
         deromanize: deromanize,

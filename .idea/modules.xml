@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../romanize/.idea/romanize.iml" filepath="$PROJECT_DIR$/../romanize/.idea/romanize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/romanize.iml" filepath="$PROJECT_DIR$/.idea/romanize.iml" />
     </modules>
   </component>
 </project>
