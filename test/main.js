@@ -1,3 +1,4 @@
+
 describe('check for parity on input & output', function () {
     it('should return the same value on conversion', function () {
         var myRoman = 'CCLIV';
@@ -28,6 +29,17 @@ describe('ensure formatting of data structures is sound', function () {
     })
 });
 
+describe('it should return solid integer numbers', function () {
+    var testIntegers = [];
+    for (var i = 0; i < 35; i++) {
+        var obj = getRandomInt(1, 10000);
+        testIntegers.push(roman.romanize(obj));
+    }
+    it('should convert all numbers', function () {
+        expect(validateForType(testIntegers, 'string')).toBeTruthy();
+    })
+})
+
 function validateForType(arrayToCheck, expectedType) {
     for (var i = 0; i < arrayToCheck.length; i++) {
         var value = arrayToCheck[i];
@@ -36,4 +48,8 @@ function validateForType(arrayToCheck, expectedType) {
         }
     }
     return true;
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }

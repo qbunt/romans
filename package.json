@@ -1,0 +1,27 @@
+{
+  "name": "romanize",
+  "version": "1.0.0",
+  "description": "A small, no-dependency lib for converting to and from roman numerals",
+  "main": "romanize.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qbunt/romanize.git"
+  },
+  "keywords": [
+    "roman",
+    "translation",
+    "numerals"
+  ],
+  "author": "qbunt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qbunt/romanize/issues"
+  },
+  "homepage": "https://github.com/qbunt/romanize#readme"
+}
