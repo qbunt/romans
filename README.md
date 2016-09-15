@@ -1,6 +1,8 @@
 # romans
 A no dependency, simple lib for converting from decimal notation to roman numerals and back again
 
+[![Build Status](https://travis-ci.org/qbunt/romanize.svg?branch=master)](https://travis-ci.org/qbunt/romanize)
+
 ## Usage:
 ```
 var roman = require('romanize');
