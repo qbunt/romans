@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "karma start karma.conf.js",
-    "ci": "karma start karma.conf.js --browsers PhantomJS",
+    "ci": "karma start karma.conf.js --single-run --browsers PhantomJS",
     "codecov": "cat coverage/*/lcov.info | codecov"
   },
   "repository": {
