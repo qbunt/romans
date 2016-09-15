@@ -7,7 +7,13 @@ A no dependency, simple lib for converting from decimal notation to roman numera
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
-## Usage:
+## Install
+Simply run the following in the terminal:
+```
+$ npm i --save romans
+```
+
+## Usage
 ```
 var roman = require('romanize');
 roman.romanize(454);
@@ -24,7 +30,7 @@ roman.allChars
 // [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ]
 ```
 
-## Tests:
+## Tests
 ```
 npm test
 ```
