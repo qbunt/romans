@@ -30,34 +30,34 @@ describe('ensure formatting of data structures is sound', function () {
 });
 
 describe('should return errors on bad input', function () {
-    it('should reject 0', () => {
-        expect(() => {
+    it('should reject 0', function(){
+        expect(function(){
             roman.romanize(0)
         }).toThrow();
     });
 
     it('should reject signed integers', function () {
-        expect(() => {
+        expect(function(){
             roman.romanize(getRandomInt(-1, -1000));
         }).toThrow();
     });
-    it('should reject undefined values', ()=>{
-        expect(()=>{
+    it('should reject undefined values', function(){
+        expect(function(){
             roman.romanize(undefined)
         }).toThrow()
     });
-    it('should reject null values', ()=>{
-        expect(()=>{
+    it('should reject null values', function(){
+        expect(function(){
             roman.romanize(null)
         }).toThrow()
     });
-    it('should reject blank values', ()=>{
-        expect(()=>{
+    it('should reject blank values', function(){
+        expect(function(){
             roman.romanize("")
         }).toThrow()
     });
-    it('should reject blank values', ()=>{
-        expect(()=>{
+    it('should reject blank values', function(){
+        expect(function(){
             roman.romanize("1000")
         }).toThrow()
     })
