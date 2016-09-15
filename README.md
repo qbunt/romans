@@ -1,9 +1,11 @@
 # romans
 A no dependency, simple lib for converting from decimal notation to roman numerals and back again
 
-[![Build Status](https://travis-ci.org/qbunt/romanize.svg?branch=master)](https://travis-ci.org/qbunt/romanize)
-[![codecov](https://codecov.io/gh/qbunt/romanize/branch/master/graph/badge.svg)](https://codecov.io/gh/qbunt/romanize)
-[![dependencies](https://david-dm.org/qbunt/romanize.svg) ](https://david-dm.org/)
+[![Build Status](https://travis-ci.org/qbunt/romans.svg?branch=master)](https://travis-ci.org/qbunt/romans)
+[![codecov](https://codecov.io/gh/qbunt/romans/branch/master/graph/badge.svg)](https://codecov.io/gh/qbunt/romans)
+[![dependencies](https://david-dm.org/qbunt/romans.svg) ](https://david-dm.org/)
+
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
 ## Usage:
 ```
