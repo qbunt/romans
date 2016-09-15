@@ -29,6 +29,12 @@ describe('ensure formatting of data structures is sound', function () {
     })
 });
 
+describe('should return errors on bad input', function () {
+    it('should reject 0', function () {
+        expect(roman.romanize(0)).toThrow('requires an unsigned integer')
+    })
+})
+
 describe('it should return solid integer numbers', function () {
     var testIntegers = [];
     for (var i = 0; i < 35; i++) {
@@ -38,7 +44,7 @@ describe('it should return solid integer numbers', function () {
     it('should convert all numbers', function () {
         expect(validateForType(testIntegers, 'string')).toBeTruthy();
     })
-})
+});
 
 function validateForType(arrayToCheck, expectedType) {
     for (var i = 0; i < arrayToCheck.length; i++) {

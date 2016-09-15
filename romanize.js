@@ -26,7 +26,6 @@
      * @returns {string}
      */
     function romanize(decimal) {
-        console.log(decimal);
         var roman = '';
         for (var i = 0; i < allChars.length; i++) {
             while(decimal >= allNumerals[i]){
@@ -34,7 +33,6 @@
                 roman += allChars[i];
             }
         }
-        console.log(roman);
         return roman;
     }
 
