@@ -15,7 +15,7 @@ $ npm i --save romans
 
 ## Usage
 ```
-var roman = require('romanize');
+var roman = require('romans');
 roman.romanize(454);
 // returns:"CDLIV"
 
