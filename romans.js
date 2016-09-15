@@ -26,6 +26,9 @@
      * @returns {string}
      */
     function romanize(decimal) {
+        if(decimal <= 0 || decimal == undefined || typeof decimal == 'string'){
+            throw new Error('requires an unsigned integer');
+        }
         var roman = '';
         for (var i = 0; i < allChars.length; i++) {
             while(decimal >= allNumerals[i]){
@@ -51,12 +54,7 @@
         return arabic;
     }
 
-    function init() {
-        deriveCollections();
-        console.info('started Romanize');
-    }
-
-    init();
+    deriveCollections();
 
     exports.romanize = romanize;
     exports.deromanize = deromanize;

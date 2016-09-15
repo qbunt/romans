@@ -30,10 +30,39 @@ describe('ensure formatting of data structures is sound', function () {
 });
 
 describe('should return errors on bad input', function () {
-    it('should reject 0', function () {
-        expect(roman.romanize(0)).toThrow('requires an unsigned integer')
+    it('should reject 0', () => {
+        expect(() => {
+            roman.romanize(0)
+        }).toThrow();
+    });
+
+    it('should reject signed integers', function () {
+        expect(() => {
+            roman.romanize(getRandomInt(-1, -1000));
+        }).toThrow();
+    });
+    it('should reject undefined values', ()=>{
+        expect(()=>{
+            roman.romanize(undefined)
+        }).toThrow()
+    });
+    it('should reject null values', ()=>{
+        expect(()=>{
+            roman.romanize(null)
+        }).toThrow()
+    });
+    it('should reject blank values', ()=>{
+        expect(()=>{
+            roman.romanize("")
+        }).toThrow()
+    });
+    it('should reject blank values', ()=>{
+        expect(()=>{
+            roman.romanize("1000")
+        }).toThrow()
     })
-})
+
+});
 
 describe('it should return solid integer numbers', function () {
     var testIntegers = [];

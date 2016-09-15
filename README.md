@@ -1,7 +1,7 @@
-### romanize
+# romans
 A no dependency, simple lib for converting from decimal notation to roman numerals and back again
 
-#### Usage:
+## Usage:
 ```
 var roman = require('romanize');
 roman.romanize(454);
@@ -16,4 +16,9 @@ roman.allNumerals
 roman.allChars
 // property containing all roman numeral characters
 // [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ]
+```
+
+## Tests:
+```
+npm test
 ```
