@@ -9,7 +9,7 @@ A no dependency, simple lib for converting from decimal notation to roman numera
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
 ## Install
-Simply run the following in the terminal:
+With [npm](https://npmjs.org/) installed, run:
 ```
 $ npm i --save romans
 ```
@@ -35,3 +35,6 @@ roman.allChars
 ```
 npm test
 ```
+
+## License
+MIT
