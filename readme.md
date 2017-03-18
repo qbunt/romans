@@ -1,4 +1,5 @@
-# romans
+<h1><a href="https://github.com/qbunt/romans" target="_blank"><img width="150" src="logo.png"></a></h1>
+
 A no dependency, simple lib for converting from decimal notation to roman numerals and back again
 
 [![Build Status](https://travis-ci.org/qbunt/romans.svg?branch=master)](https://travis-ci.org/qbunt/romans)
@@ -8,7 +9,7 @@ A no dependency, simple lib for converting from decimal notation to roman numera
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
 ## Install
-Simply run the following in the terminal:
+With [npm](https://npmjs.org/) installed, run:
     
     $ npm i --save romans
 
@@ -28,11 +29,10 @@ Simply run the following in the terminal:
     // property containing all roman numeral characters
     // [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ]
 
-
 ## Testing
-```
-npm test
-```
+
+    npm test
+
 
 ## License
 [MIT](./LICENSE)
