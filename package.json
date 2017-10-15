@@ -27,12 +27,12 @@
   },
   "homepage": "https://github.com/qbunt/romanize#readme",
   "devDependencies": {
-    "codecov": ">1.0.0",
-    "jasmine": "^2.5.1",
-    "karma": "^1.3.0",
-    "karma-chrome-launcher": "^2.0.0",
+    "codecov": "^2.3.1",
+    "jasmine": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
-    "karma-jasmine": "^1.0.2",
-    "karma-phantomjs-launcher": "^1.0.2"
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4"
   }
 }
