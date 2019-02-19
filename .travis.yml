@@ -6,5 +6,6 @@ install:
   - npm install -g codecov
 
 script:
+  - npm run ci
   - codecov
 
