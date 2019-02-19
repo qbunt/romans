@@ -4,20 +4,15 @@
     var roman_map = {
         'M': 1000, 'CM': 900, 'D': 500, 'CD': 400, 'C': 100, 'XC': 90, 'L': 50, 'XL': 40, 'X': 10, 'IX': 9, 'V': 5, 'IV': 4, 'I': 1};
 
-    var allChars = [];
-    var allNumerals = [];
+    var allChars;
+    var allNumerals;
 
     /**
      * splits the object hash into several useful parts
      */
     function deriveCollections() {
-        for(var character in roman_map){
-            allChars.push(character);
-        }
-
-        for(var numeral in roman_map){
-            allNumerals.push(roman_map[numeral]);
-        }
+        allChars = Object.keys(roman_map)
+        allNumerals = Object.keys(roman_map).map(function(obj){ return roman_map[obj]})
     }
 
     /**
