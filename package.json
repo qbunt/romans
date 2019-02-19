@@ -1,6 +1,6 @@
 {
   "name": "romans",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A small, no-dependency lib for converting to and from roman numerals",
   "main": "romans.js",
   "directories": {
@@ -25,14 +25,17 @@
   "bugs": {
     "url": "https://github.com/qbunt/romanize/issues"
   },
+  "resolutions": {
+    "braces": "^2.3.2"
+  },
   "homepage": "https://github.com/qbunt/romanize#readme",
   "devDependencies": {
-    "codecov": "^3.1.0",
+    "codecov": "^3.2.0",
     "jasmine": "^2.99.0",
     "karma": "^4.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.2",
-    "karma-jasmine": "^1.1.2",
+    "karma-jasmine": "^2.0.1",
     "karma-phantomjs-launcher": "^1.0.4"
   }
 }
