@@ -24,7 +24,7 @@
         if(decimal <= 0 || typeof decimal === 'undefined' || typeof decimal == 'string'){
             throw new Error('requires an unsigned integer')
         }
-        var roman = '';
+        var roman = ''
         for (var i = 0; i < allChars.length; i++) {
             while(decimal >= allNumerals[i]){
                 decimal -= allNumerals[i]
