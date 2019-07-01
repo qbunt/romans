@@ -2,10 +2,10 @@
 
 (function(exports){
     var roman_map = {
-        'M': 1000, 'CM': 900, 'D': 500, 'CD': 400, 'C': 100, 'XC': 90, 'L': 50, 'XL': 40, 'X': 10, 'IX': 9, 'V': 5, 'IV': 4, 'I': 1};
+        'M': 1000, 'CM': 900, 'D': 500, 'CD': 400, 'C': 100, 'XC': 90, 'L': 50, 'XL': 40, 'X': 10, 'IX': 9, 'V': 5, 'IV': 4, 'I': 1}
 
-    var allChars;
-    var allNumerals;
+    var allChars
+    var allNumerals
 
     /**
      * splits the object hash into several useful parts
@@ -21,7 +21,7 @@
      * @returns {string}
      */
     function romanize(decimal) {
-        if(decimal <= 0 || typeof decimal === undefined || typeof decimal == 'string'){
+        if(decimal <= 0 || typeof decimal === 'undefined' || typeof decimal == 'string'){
             throw new Error('requires an unsigned integer')
         }
         var roman = '';
@@ -31,7 +31,7 @@
                 roman += allChars[i]
             }
         }
-        return roman;
+        return roman
     }
 
     function deromanize(romanStr) {
@@ -39,7 +39,7 @@
         var arabic = 0
         var iteration = romanString.length
         while(iteration--){
-            var cumulative = roman_map[romanString[iteration]];
+            var cumulative = roman_map[romanString[iteration]]
             if ( cumulative < roman_map[romanString[iteration+1]] ){
                 arabic -= cumulative
             } else {
@@ -49,7 +49,7 @@
         return arabic
     }
 
-    deriveCollections();
+    deriveCollections()
 
     exports.romanize = romanize
     exports.deromanize = deromanize
