@@ -13,7 +13,8 @@
     "numerals"
   ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-with-coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
@@ -28,5 +29,8 @@
   "devDependencies": {
     "codecov": "^3.5.0",
     "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "codacy-coverage": "^3.4.0"
   }
 }
