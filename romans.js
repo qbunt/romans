@@ -21,38 +21,38 @@
      * @returns {string}
      */
     function romanize(decimal) {
-        if(decimal <= 0 || decimal == undefined || typeof decimal == 'string'){
-            throw new Error('requires an unsigned integer');
+        if(decimal <= 0 || typeof decimal === undefined || typeof decimal == 'string'){
+            throw new Error('requires an unsigned integer')
         }
         var roman = '';
         for (var i = 0; i < allChars.length; i++) {
             while(decimal >= allNumerals[i]){
-                decimal -= allNumerals[i];
-                roman += allChars[i];
+                decimal -= allNumerals[i]
+                roman += allChars[i]
             }
         }
         return roman;
     }
 
     function deromanize(romanStr) {
-        var romanString = romanStr.toUpperCase();
-        var arabic = 0;
-        var iteration = romanString.length;
+        var romanString = romanStr.toUpperCase()
+        var arabic = 0
+        var iteration = romanString.length
         while(iteration--){
             var cumulative = roman_map[romanString[iteration]];
             if ( cumulative < roman_map[romanString[iteration+1]] ){
-                arabic -= cumulative;
+                arabic -= cumulative
             } else {
-                arabic += cumulative;
+                arabic += cumulative
             }
         }
-        return arabic;
+        return arabic
     }
 
     deriveCollections();
 
-    exports.romanize = romanize;
-    exports.deromanize = deromanize;
-    exports.allChars = allChars;
-    exports.allNumerals = allNumerals;
-})(typeof exports === 'undefined' ? this['roman']={} : exports);
+    exports.romanize = romanize
+    exports.deromanize = deromanize
+    exports.allChars = allChars
+    exports.allNumerals = allNumerals
+})(typeof exports === 'undefined' ? this['roman']={} : exports)
