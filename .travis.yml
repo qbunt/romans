@@ -6,6 +6,6 @@ install:
   - npm install -g codecov
 
 script:
-  - npx karma start karma.conf.js --single-run --browsers PhantomJS
+  - npm run test
   - codecov
 

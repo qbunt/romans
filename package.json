@@ -12,6 +12,9 @@
     "translation",
     "numerals"
   ],
+  "scripts": {
+    "test": "jest"
+  },
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
