@@ -1,16 +1,8 @@
 {
   "name": "romans",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A small, no-dependency lib for converting to and from roman numerals",
   "main": "romans.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "karma start karma.conf.js",
-    "ci": "karma start karma.conf.js --single-run --browsers PhantomJS",
-    "codecov": "cat coverage/*/lcov.info | codecov"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qbunt/romans.git"
@@ -20,6 +12,14 @@
     "translation",
     "numerals"
   ],
+  "scripts": {
+    "test": "jest",
+    "test-with-coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
   "author": "qbunt",
   "license": "MIT",
   "bugs": {
@@ -27,12 +27,10 @@
   },
   "homepage": "https://github.com/qbunt/romanize#readme",
   "devDependencies": {
-    "codecov": "^3.6.1",
-    "jasmine": "^3.5.0",
-    "karma": "^4.4.1",
-    "karma-chrome-launcher": "^3.1.0",
-    "karma-coverage": "^2.0.1",
-    "karma-jasmine": "^3.1.0",
-    "karma-phantomjs-launcher": "^1.0.4"
+    "codecov": "^3.5.0",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "codacy-coverage": "^3.4.0"
   }
 }
