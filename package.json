@@ -27,10 +27,8 @@
   },
   "homepage": "https://github.com/qbunt/romanize#readme",
   "devDependencies": {
-    "codecov": "^3.5.0",
+    "codecov": "^3.6.5",
     "jest": "^24.8.0"
   },
-  "dependencies": {
-    "codacy-coverage": "^3.4.0"
-  }
+  "dependencies": {}
 }
