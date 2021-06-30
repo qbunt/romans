@@ -2,18 +2,18 @@
 
 A no dependency, simple lib for converting from decimal notation to roman numerals and back again
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3642e8e1b1b940ce8faa04bb7083f0fb)](https://app.codacy.com/app/qbunt/romans?utm_source=github.com&utm_medium=referral&utm_content=qbunt/romans&utm_campaign=Badge_Grade_Dashboard)
-[![Build Status](https://travis-ci.org/qbunt/romans.svg?branch=master)](https://travis-ci.org/qbunt/romans)
-![Node.js CI](https://github.com/qbunt/romans/workflows/Node.js%20CI/badge.svg)
-[![codecov](https://codecov.io/gh/qbunt/romans/branch/master/graph/badge.svg?token=kD6QSvKfTe)](https://codecov.io/gh/qbunt/romans)
-[![dependencies](https://david-dm.org/qbunt/romans.svg) ](https://david-dm.org/)
-
+[![quality](https://api.codacy.com/project/badge/Grade/3642e8e1b1b940ce8faa04bb7083f0fb)](https://app.codacy.com/app/qbunt/romans?utm_source=github.com&utm_medium=referral&utm_content=qbunt/romans&utm_campaign=Badge_Grade_Dashboard)
+[![build](https://travis-ci.org/qbunt/romans.svg?branch=master)](https://travis-ci.org/qbunt/romans)
+[![coverage](https://codecov.io/gh/qbunt/romans/branch/master/graph/badge.svg?token=kD6QSvKfTe)](https://codecov.io/gh/qbunt/romans)
+[![deps](https://david-dm.org/qbunt/romans.svg) ](https://david-dm.org/)
 [![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
 
 ## Install
 With [npm](https://npmjs.org/) installed, run:
-    
-    $ npm i --save romans
+
+```shell
+$ npm i --save romans
+```    
 
 ## Usage
 ```js
@@ -35,7 +35,7 @@ roman.allChars
 ## Testing
 
 ```shell
-npm test
+$ npm test
 ```
     
 
