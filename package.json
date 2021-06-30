@@ -1,6 +1,6 @@
 {
   "name": "romans",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A small, no-dependency lib for converting to and from roman numerals",
   "main": "romans.js",
   "repository": {
