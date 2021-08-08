@@ -15,7 +15,7 @@ const roman_map = {
 }
 
 const allChars = Object.keys(roman_map)
-const allNumerals = Object.keys(roman_map).map((obj) => roman_map[obj])
+const allNumerals = Object.values(roman_map)
 
 const romanize = (decimal) => {
   if (
@@ -26,7 +26,7 @@ const romanize = (decimal) => {
     throw new Error('requires an unsigned integer')
   }
   let roman = ''
-  for (var i = 0; i < allChars.length; i++) {
+  for (let i = 0; i < allChars.length; i++) {
     while (decimal >= allNumerals[i]) {
       decimal -= allNumerals[i]
       roman += allChars[i]
