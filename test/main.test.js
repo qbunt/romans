@@ -30,6 +30,10 @@ describe('check for parity on input & output', function () {
       expect(typeof myConversions[i]).toBe('number')
     }
   })
+  it(`should return a solid value for 153`, function () {
+    expect(romans.romanize(153)).toBe('CLIII')
+    expect(romans.deromanize(`CLIII`)).toBe(153)
+  })
 })
 
 describe('ensure formatting of data structures is sound', function () {
