@@ -6,6 +6,7 @@ A no dependency, simple lib for converting from decimal notation to roman numera
 [![build](https://travis-ci.org/qbunt/romans.svg?branch=master)](https://travis-ci.org/qbunt/romans)
 [![coverage](https://codecov.io/gh/qbunt/romans/branch/master/graph/badge.svg?token=kD6QSvKfTe)](https://codecov.io/gh/qbunt/romans)
 [![deps](https://david-dm.org/qbunt/romans.svg) ](https://david-dm.org/)
+![npm](https://img.shields.io/npm/v/romans)
 
 [![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
 
