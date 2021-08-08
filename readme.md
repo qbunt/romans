@@ -12,10 +12,10 @@ A no dependency, simple lib for converting from decimal notation to roman numera
 [![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
 
 ## Install
-With [npm](https://npmjs.org/) installed, run:
+With [yarn](https://yarnpkg.com/) installed, run:
 
 ```shell
-$ npm i --save romans
+$ yarn add romans
 ```    
 
 ## Usage
@@ -38,10 +38,8 @@ roman.allChars
 ## Testing
 
 ```shell
-$ npm test
+$ yarn test
 ```
-    
-
 
 ## License
 [MIT](./LICENSE)
