@@ -36,6 +36,10 @@ const romanize = (decimal) => {
 }
 
 const deromanize = (romanStr) => {
+  if (typeof romanStr !== 'string') {
+    throw new Error('requires a string')
+  }
+
   let romanString = romanStr.toUpperCase()
   let arabic = 0
   let iteration = romanString.length
