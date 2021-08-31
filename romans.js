@@ -20,8 +20,8 @@ const allNumerals = Object.values(roman_map)
 const romanize = (decimal) => {
   if (
     decimal <= 0 ||
-    typeof decimal === 'undefined' ||
-    typeof decimal === 'string'
+    typeof decimal !== 'number' ||
+    Math.floor(decimal) !== decimal
   ) {
     throw new Error('requires an unsigned integer')
   }

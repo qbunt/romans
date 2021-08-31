@@ -97,6 +97,16 @@ describe('should return errors on bad input', function () {
       romans.deromanize({ toUpperCase: function () { return 'III' } })
     }).toThrow()
   })
+  it('should reject objects', function () {
+    expect(function () {
+      romans.romanize({ value: 1000 })
+    }).toThrow()
+  })
+  it('should reject float values', function () {
+    expect(function () {
+      romans.romanize(567.789)
+    }).toThrow()
+  })
 })
 
 describe('it should return solid integer numbers', function () {
