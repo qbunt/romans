@@ -80,6 +80,23 @@ describe('should return errors on bad input', function () {
       romans.romanize('1000')
     }).toThrow()
   })
+  it('should reject non-string inputs for deromanizer', function () {
+    expect(function () {
+      romans.deromanize(1000)
+    }).toThrow()
+
+    expect(function () {
+      romans.deromanize({ value: 'III' })
+    }).toThrow()
+
+    expect(function () {
+      romans.deromanize(true)
+    }).toThrow()
+
+    expect(function () {
+      romans.deromanize({ toUpperCase: function () { return 'III' } })
+    }).toThrow()
+  })
 })
 
 describe('it should return solid integer numbers', function () {
