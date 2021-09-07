@@ -16,6 +16,8 @@ const roman_map = {
 
 const allChars = Object.keys(roman_map)
 const allNumerals = Object.values(roman_map)
+const romanPattern =
+  /^(M{1,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,4}(CM|C?D|D?C{1,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,4}(CM|CD|D?C{0,3})(XC|X?L|L?X{1,3})(IX|IV|V?I{0,3})|M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|I?V|V?I{1,3}))$/
 
 const romanize = (decimal) => {
   if (
@@ -23,7 +25,7 @@ const romanize = (decimal) => {
     typeof decimal !== 'number' ||
     Math.floor(decimal) !== decimal
   ) {
-    throw new Error('requires an unsigned integer')
+    throw new Error(`requires an unsigned integer`)
   }
   let roman = ''
   for (let i = 0; i < allChars.length; i++) {
@@ -37,9 +39,11 @@ const romanize = (decimal) => {
 
 const deromanize = (romanStr) => {
   if (typeof romanStr !== 'string') {
-    throw new Error('requires a string')
+    throw new Error(`requires a string`)
   }
-
+  if (!romanPattern.test(romanStr)) {
+    throw new Error(`requires valid roman numeral string`)
+  }
   let romanString = romanStr.toUpperCase()
   let arabic = 0
   let iteration = romanString.length

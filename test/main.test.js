@@ -1,4 +1,5 @@
 const romans = require('../romans')
+const { deromanize } = require('../romans')
 
 describe(`needs some methods`, () => {
   it('should be an object', () => {
@@ -21,18 +22,23 @@ describe('check for parity on input & output', function () {
     expect(myArabic).toEqual(romans.deromanize(myRoman))
   })
 
-  it('should gracefully handle mixed cases', function () {
+  it('should throw on mixed cases', function () {
     const myStrings = ['mXvIi', 'dcvii', 'mmILV']
-    const myConversions = myStrings.map(function (item) {
-      return romans.deromanize(item)
+    myStrings.forEach((k) => {
+      expect(function () {
+        deromanize(k)
+      }).toThrow()
     })
-    for (var i = 0; i < myConversions.length; i++) {
-      expect(typeof myConversions[i]).toBe('number')
-    }
   })
   it(`should return a solid value for 153`, function () {
     expect(romans.romanize(153)).toBe('CLIII')
     expect(romans.deromanize(`CLIII`)).toBe(153)
+  })
+  it(`should reject invalid input`, function () {
+    // https://github.com/qbunt/romans/issues/16
+    expect(function () {
+      romans.deromanize(`CIVIL`)
+    }).toThrow(`requires valid roman numeral string`)
   })
 })
 
@@ -94,7 +100,11 @@ describe('should return errors on bad input', function () {
     }).toThrow()
 
     expect(function () {
-      romans.deromanize({ toUpperCase: function () { return 'III' } })
+      romans.deromanize({
+        toUpperCase: function () {
+          return 'III'
+        }
+      })
     }).toThrow()
   })
   it('should reject objects', function () {
