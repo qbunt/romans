@@ -61,6 +61,11 @@ describe('should return errors on bad input', function () {
     }).toThrow()
   })
 
+  it(`should reject 4000`, function () {
+    expect(function () {
+      romans.romanize(4000)
+    }).toThrow()
+  })
   it('should reject signed integers', function () {
     expect(function () {
       romans.romanize(getRandomInt(-1, -1000))
@@ -86,7 +91,7 @@ describe('should return errors on bad input', function () {
       romans.romanize('1000')
     }).toThrow()
   })
-  it('should reject non-string inputs for deromanizer', function () {
+  it('should throw on non-string input', function () {
     expect(function () {
       romans.deromanize(1000)
     }).toThrow()
@@ -122,7 +127,7 @@ describe('should return errors on bad input', function () {
 describe('it should return solid integer numbers', function () {
   const testIntegers = []
   for (var i = 0; i < 35; i++) {
-    var obj = getRandomInt(1, 10000)
+    var obj = getRandomInt(1, 3999)
     testIntegers.push(romans.romanize(obj))
   }
   it('should convert all numbers', function () {

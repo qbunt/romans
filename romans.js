@@ -27,6 +27,9 @@ const romanize = (decimal) => {
   ) {
     throw new Error(`requires an unsigned integer`)
   }
+  if (decimal >= 4000) {
+    throw new Error(`requires max value of less than 3999 or less`)
+  }
   let roman = ''
   for (let i = 0; i < allChars.length; i++) {
     while (decimal >= allNumerals[i]) {
@@ -38,7 +41,7 @@ const romanize = (decimal) => {
 }
 
 const deromanize = (romanStr) => {
-  if (typeof romanStr !== 'string') {
+  if (typeof romanStr !== `string`) {
     throw new Error(`requires a string`)
   }
   if (!romanPattern.test(romanStr)) {
