@@ -1,6 +1,6 @@
 {
   "name": "romans",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A small, no-dependency lib for converting to and from roman numerals",
   "main": "romans.js",
   "repository": {
@@ -30,7 +30,7 @@
   "devDependencies": {
     "codecov": "^3.6.5",
     "jest": "^24.8.0",
-    "prettier": "^2.3.2"
+    "prettier": "^2.4.0"
   },
   "dependencies": {}
 }
