@@ -3,6 +3,7 @@
   "version": "2.0.2",
   "description": "A small, no-dependency lib for converting to and from roman numerals",
   "main": "romans.js",
+  "types": "romans.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qbunt/romans.git"
