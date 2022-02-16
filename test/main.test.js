@@ -1,3 +1,4 @@
+/* eslint-disable */
 const romans = require('../romans')
 const { deromanize } = require('../romans')
 
@@ -133,6 +134,12 @@ describe('it should return solid integer numbers', function () {
   it('should convert all numbers', function () {
     expect(validateForType(testIntegers, 'string')).toBeTruthy()
   })
+})
+describe('should have a consistent api signature', function () {
+  expect(romans).toHaveProperty('romanize')
+  expect(romans).toHaveProperty('deromanize')
+  expect(romans).toHaveProperty('allChars')
+  expect(romans).toHaveProperty('allNumerals')
 })
 
 function validateForType(arrayToCheck, expectedType) {
