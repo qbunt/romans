@@ -11,7 +11,7 @@ A no-dependency library for converting from decimal notation to roman 🏛 numer
 [![Wallaby.js](https://img.shields.io/badge/wallaby.js-powered-blue.svg?style=flat&logo=github)](https://wallabyjs.com/oss/)
 
 ## Install
-With [yarn](https://yarnpkg.com/) installed, run:
+With [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), [pnpm](https://pnpm.io/), or [yarn](https://yarnpkg.com/) installed, run:
 
 ```shell
 $ yarn add romans
