@@ -48,4 +48,4 @@ $ yarn test
 [MIT](./LICENSE)
 
 ## Contributions
-If you'd like to contribute to this library, please [send a PR](/pulls) or [file a new issue](/issues). I aim to get PRs accepted in short order *should they align with the goals*. Also, be nice.
+If you'd like to contribute to this library, please [send a PR](https://github.com/qbunt/romans/pulls) or [file a new issue](https://github.com/qbunt/romans/issues). I aim to get PRs accepted in short order *should they align with the goals*. Also, be nice.
