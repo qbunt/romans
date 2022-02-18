@@ -1,6 +1,6 @@
 <h1><a href="https://github.com/qbunt/romans" target="_blank"><img width="150" src="logo.png"></a></h1>
 
-A no dependency, simple lib for converting from decimal notation to roman numerals and back again
+A no-dependency library for converting from decimal notation to roman 🏛 numerals and back again. 
 
 [![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
 
@@ -48,4 +48,4 @@ $ yarn test
 [MIT](./LICENSE)
 
 ## Contributions
-If you'd like to contribute to this library, please issue a PR or file a new issue. I aim to get PRs accepted in short order *should they align with the goals*.
+If you'd like to contribute to this library, please [send a PR](/pulls) or [file a new issue](/issues). I aim to get PRs accepted in short order *should they align with the goals*. Also, be nice.
