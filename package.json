@@ -4,10 +4,7 @@
   "description": "A small, no-dependency lib for converting to and from roman numerals",
   "main": "romans.js",
   "types": "romans.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/qbunt/romans.git"
-  },
+  "repository": "git@github.com:qbunt/romans.git",
   "keywords": [
     "roman",
     "translation",
@@ -34,5 +31,8 @@
     "jest": "^24.8.0",
     "prettier": "^2.4.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
