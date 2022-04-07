@@ -31,8 +31,5 @@
     "jest": "^24.8.0",
     "prettier": "^2.4.0"
   },
-  "dependencies": {},
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  "dependencies": {}
 }
