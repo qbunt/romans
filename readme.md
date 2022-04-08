@@ -3,6 +3,7 @@
 A no-dependency library for converting from decimal notation to roman 🏛 numerals and back again. 
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D0BTCUA)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fqbunt%2Fromans.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fqbunt%2Fromans?ref=badge_shield)
 
 [![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
 
@@ -48,6 +49,9 @@ $ yarn test
 
 ## License
 [MIT](./LICENSE)
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fqbunt%2Fromans.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fqbunt%2Fromans?ref=badge_large)
 
 ## Contributions
 If you'd like to contribute to this library, please [send a PR](https://github.com/qbunt/romans/pulls) or [file a new issue](https://github.com/qbunt/romans/issues). I aim to get PRs accepted in short order *should they align with the goals*. Also, be nice.
