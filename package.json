@@ -1,6 +1,6 @@
 {
   "name": "romans",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "A small, no-dependency lib for converting to and from roman numerals",
   "main": "romans.js",
   "types": "romans.d.ts",
@@ -26,10 +26,8 @@
   },
   "homepage": "https://github.com/qbunt/romanize#readme",
   "devDependencies": {
-    "codecov": "^3.6.5",
-    "eslint": "^8.1.0",
-    "jest": "^24.8.0",
-    "prettier": "^2.4.0"
-  },
-  "dependencies": {}
+    "eslint": "^8.20.0",
+    "jest": "^24.9.0",
+    "prettier": "^2.7.1"
+  }
 }
