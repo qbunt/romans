@@ -13,7 +13,7 @@ jobs:
           node-version: '18.17.1'
           registry-url: 'https://registry.npmjs.org'
 
-      - uses: pnpm/action-setup@2.4.0
+      - uses: pnpm/action-setup@2
         name: Install pnpm
         id: pnpm-install
         with:
