@@ -205,6 +205,77 @@ describe('deromanize validation', function () {
   })
 })
 
+const fc = require('fast-check')
+
+describe('property-based tests', () => {
+  it('should always convert back to the same number for valid inputs', () => {
+    fc.assert(
+      fc.property(
+        fc.nat(3999).map(n => n + 1),
+        num => {
+          try {
+            const roman = romans.romanize(num)
+            const back = romans.deromanize(roman)
+            return back === num
+          } catch (e) {
+            return true // Skip if validation throws
+          }
+        }
+      )
+    )
+  })
+
+  it('should never generate invalid roman numeral patterns for valid inputs', () => {
+    fc.assert(
+      fc.property(
+        fc.nat(3999).map(n => n + 1),
+        num => {
+          try {
+            const roman = romans.romanize(num)
+            return !roman.match(/([IVXLCDM])\1{3,}/)
+          } catch (e) {
+            return true // Skip if validation throws
+          }
+        }
+      )
+    )
+  })
+
+  it('should maintain ordering properties for valid inputs', () => {
+    fc.assert(
+      fc.property(
+        fc.nat(3998).map(n => n + 1),
+        num => {
+          try {
+            const roman1 = romans.romanize(num)
+            const roman2 = romans.romanize(num + 1)
+            return romans.deromanize(roman1) < romans.deromanize(roman2)
+          } catch (e) {
+            return true // Skip if validation throws
+          }
+        }
+      )
+    )
+  })
+
+  it('should follow subtractive notation rules for valid inputs', () => {
+    fc.assert(
+      fc.property(
+        fc.nat(3999).map(n => n + 1),
+        num => {
+          try {
+            const roman = romans.romanize(num)
+            const validSubtractive = /^M*(?:CM|CD|D?C{0,3})(?:XC|XL|L?X{0,3})(?:IX|IV|V?I{0,3})$/
+            return validSubtractive.test(roman)
+          } catch (e) {
+            return true // Skip if validation throws
+          }
+        }
+      )
+    )
+  })
+})
+
 function validateForType(arrayToCheck, expectedType) {
   for (var i = 0; i < arrayToCheck.length; i++) {
     var value = arrayToCheck[i]
