@@ -1,6 +1,6 @@
 <h1><a href="https://github.com/qbunt/romans" target="_blank"><img width="150" src="logo.png"></a></h1>
 
-A no-dependency library for converting from decimal notation to roman 🏛 numerals and back again. 
+Transform numbers into Roman numerals (and back again) with this zero-dependency library. Perfect for when X, V, and I are more your style than 1, 2, 3. As battle-tested as Spartacus in a gladiator match. 🏛️
 
 [![quality](https://api.codacy.com/project/badge/Grade/3642e8e1b1b940ce8faa04bb7083f0fb)](https://app.codacy.com/app/qbunt/romans?utm_source=github.com&utm_medium=referral&utm_content=qbunt/romans&utm_campaign=Badge_Grade_Dashboard)
 [![tests](https://github.com/qbunt/romans/actions/workflows/nodejs.yml/badge.svg)](https://github.com/qbunt/romans/actions/workflows/nodejs.yml)
@@ -44,9 +44,12 @@ $ yarn test
 ```
 
 ## License
+[MIT](./LICENSE)
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fqbunt%2Fromans.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fqbunt%2Fromans?ref=badge_large)
 
-[MIT](./LICENSE)
+_Note: The license obligation check says there are dependencies, they are purely used for dev tests, the core library has no direct dependencies 💪_
+
 
 ## Contributions
 If you'd like to contribute to this library, please [send a PR](https://github.com/qbunt/romans/pulls) or [file a new issue](https://github.com/qbunt/romans/issues). I aim to get PRs accepted in short order *should they align with the goals*. Also, be nice.

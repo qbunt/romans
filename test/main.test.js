@@ -194,6 +194,15 @@ describe('deromanize validation', function () {
       }).toThrow()
     })
   })
+
+  it('should reject Unicode characters and emojis', function () {
+    const invalidInputs = ['MⅡⅢ', 'X🏛️I', 'C™D', 'Ⅴ', 'МСМ', 'ＩＶ']
+    invalidInputs.forEach(input => {
+      expect(function () {
+        romans.deromanize(input)
+      }).toThrow()
+    })
+  })
 })
 
 function validateForType(arrayToCheck, expectedType) {
