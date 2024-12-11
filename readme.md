@@ -4,7 +4,6 @@ Transform ⚡ numbers into Roman numerals (and back again) with this zero-depend
 
 [![quality](https://api.codacy.com/project/badge/Grade/3642e8e1b1b940ce8faa04bb7083f0fb)](https://app.codacy.com/app/qbunt/romans?utm_source=github.com&utm_medium=referral&utm_content=qbunt/romans&utm_campaign=Badge_Grade_Dashboard)
 [![tests](https://github.com/qbunt/romans/actions/workflows/nodejs.yml/badge.svg)](https://github.com/qbunt/romans/actions/workflows/nodejs.yml)
-
 [![Socket Badge](https://socket.dev/api/badge/npm/package/romans/2.0.18)](https://socket.dev/npm/package/romans/overview/2.0.18)
 
 ## Install 🔨
