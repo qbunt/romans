@@ -67,6 +67,7 @@ describe('should return errors on bad input', function () {
       romans.romanize(4000)
     }).toThrow()
   })
+
   it('should reject signed integers', function () {
     expect(function () {
       romans.romanize(getRandomInt(-1, -1000))
@@ -92,7 +93,16 @@ describe('should return errors on bad input', function () {
       romans.romanize('1000')
     }).toThrow()
   })
+
   it('should throw on non-string input', function () {
+    expect(function () {
+      romans.deromanize(typeof {})
+    }).toThrow()
+
+    expect(function () {
+      romans.deromanize([1000])
+    }).toThrow()
+
     expect(function () {
       romans.deromanize(1000)
     }).toThrow()
@@ -123,6 +133,24 @@ describe('should return errors on bad input', function () {
       romans.romanize(567.789)
     }).toThrow()
   })
+
+  it('should reject NaN', function () {
+    expect(function () {
+      romans.romanize(NaN)
+    }).toThrow()
+  })
+
+  it('should reject Infinity', function () {
+    expect(function () {
+      romans.romanize(Infinity)
+    }).toThrow()
+  })
+
+  it('should reject non-integer strings for romanize', function () {
+    expect(function () {
+      romans.romanize('abc')
+    }).toThrow()
+  })
 })
 
 describe('it should return solid integer numbers', function () {
@@ -140,6 +168,112 @@ describe('should have a consistent api signature', function () {
   expect(romans).toHaveProperty('deromanize')
   expect(romans).toHaveProperty('allChars')
   expect(romans).toHaveProperty('allNumerals')
+})
+
+describe('deromanize validation', function () {
+  it('should reject impossible roman numerals', function () {
+    const invalidRomans = ['IIII', 'VV', 'XXXX', 'LL', 'CCCC', 'DD', 'MMMM']
+    invalidRomans.forEach(numeral => {
+      expect(function () {
+        romans.deromanize(numeral)
+      }).toThrow()
+    })
+  })
+
+  it('should handle edge cases correctly', function () {
+    expect(romans.deromanize('MCMXCIX')).toBe(1999)
+    expect(romans.deromanize('CDXLIV')).toBe(444)
+    expect(romans.romanize(3999)).toBe('MMMCMXCIX')
+  })
+
+  it('should reject invalid character combinations', function () {
+    const invalidCombos = ['IC', 'XM', 'XD', 'VC', 'IL', 'VX']
+    invalidCombos.forEach(combo => {
+      expect(function () {
+        romans.deromanize(combo)
+      }).toThrow()
+    })
+  })
+
+  it('should reject Unicode characters and emojis', function () {
+    const invalidInputs = ['MⅡⅢ', 'X🏛️I', 'C™D', 'Ⅴ', 'МСМ', 'ＩＶ']
+    invalidInputs.forEach(input => {
+      expect(function () {
+        romans.deromanize(input)
+      }).toThrow()
+    })
+  })
+})
+
+const fc = require('fast-check')
+
+describe('property-based tests', () => {
+  it('should always convert back to the same number for valid inputs', () => {
+    fc.assert(
+      fc.property(
+        fc.nat(3999).map(n => n + 1),
+        num => {
+          try {
+            const roman = romans.romanize(num)
+            const back = romans.deromanize(roman)
+            return back === num
+          } catch (e) {
+            return true // Skip if validation throws
+          }
+        }
+      )
+    )
+  })
+
+  it('should never generate invalid roman numeral patterns for valid inputs', () => {
+    fc.assert(
+      fc.property(
+        fc.nat(3999).map(n => n + 1),
+        num => {
+          try {
+            const roman = romans.romanize(num)
+            return !roman.match(/([IVXLCDM])\1{3,}/)
+          } catch (e) {
+            return true // Skip if validation throws
+          }
+        }
+      )
+    )
+  })
+
+  it('should maintain ordering properties for valid inputs', () => {
+    fc.assert(
+      fc.property(
+        fc.nat(3998).map(n => n + 1),
+        num => {
+          try {
+            const roman1 = romans.romanize(num)
+            const roman2 = romans.romanize(num + 1)
+            return romans.deromanize(roman1) < romans.deromanize(roman2)
+          } catch (e) {
+            return true // Skip if validation throws
+          }
+        }
+      )
+    )
+  })
+
+  it('should follow subtractive notation rules for valid inputs', () => {
+    fc.assert(
+      fc.property(
+        fc.nat(3999).map(n => n + 1),
+        num => {
+          try {
+            const roman = romans.romanize(num)
+            const validSubtractive = /^M*(?:CM|CD|D?C{0,3})(?:XC|XL|L?X{0,3})(?:IX|IV|V?I{0,3})$/
+            return validSubtractive.test(roman)
+          } catch (e) {
+            return true // Skip if validation throws
+          }
+        }
+      )
+    )
+  })
 })
 
 function validateForType(arrayToCheck, expectedType) {
