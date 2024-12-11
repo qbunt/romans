@@ -47,6 +47,7 @@ $ yarn test
 [MIT](./LICENSE)
 
 Open source license obligations are tracked via FOSSA scans.
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fqbunt%2Fromans.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fqbunt%2Fromans?ref=badge_large)
 
 _Note: The license obligation check says there are dependencies, they are purely used for dev tests, the core library has no direct dependencies 💪_
