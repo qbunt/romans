@@ -46,10 +46,13 @@ $ yarn test
 ## License
 [MIT](./LICENSE)
 
+Open source license obligations are tracked via FOSSA scans.
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fqbunt%2Fromans.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fqbunt%2Fromans?ref=badge_large)
 
 _Note: The license obligation check says there are dependencies, they are purely used for dev tests, the core library has no direct dependencies 💪_
 
+## Security
+I take supply chain security extremely seriously and run [socket.dev scans](https://socket.dev/npm/package/romans/overview/) on all PRs and releases. Although there are no dependencies on the library, I value your trust.
 
 ## Contributions
 If you'd like to contribute to this library, please [send a PR](https://github.com/qbunt/romans/pulls) or [file a new issue](https://github.com/qbunt/romans/issues). I aim to get PRs accepted in short order *should they align with the goals*. Also, be nice. 
