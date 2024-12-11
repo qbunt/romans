@@ -67,6 +67,7 @@ describe('should return errors on bad input', function () {
       romans.romanize(4000)
     }).toThrow()
   })
+
   it('should reject signed integers', function () {
     expect(function () {
       romans.romanize(getRandomInt(-1, -1000))
@@ -92,7 +93,16 @@ describe('should return errors on bad input', function () {
       romans.romanize('1000')
     }).toThrow()
   })
+
   it('should throw on non-string input', function () {
+    expect(function () {
+      romans.deromanize(typeof {})
+    }).toThrow()
+
+    expect(function () {
+      romans.deromanize([1000])
+    }).toThrow()
+
     expect(function () {
       romans.deromanize(1000)
     }).toThrow()
@@ -123,6 +133,24 @@ describe('should return errors on bad input', function () {
       romans.romanize(567.789)
     }).toThrow()
   })
+
+  it('should reject NaN', function () {
+    expect(function () {
+      romans.romanize(NaN)
+    }).toThrow()
+  })
+
+  it('should reject Infinity', function () {
+    expect(function () {
+      romans.romanize(Infinity)
+    }).toThrow()
+  })
+
+  it('should reject non-integer strings for romanize', function () {
+    expect(function () {
+      romans.romanize('abc')
+    }).toThrow()
+  })
 })
 
 describe('it should return solid integer numbers', function () {
@@ -140,6 +168,32 @@ describe('should have a consistent api signature', function () {
   expect(romans).toHaveProperty('deromanize')
   expect(romans).toHaveProperty('allChars')
   expect(romans).toHaveProperty('allNumerals')
+})
+
+describe('deromanize validation', function () {
+  it('should reject impossible roman numerals', function () {
+    const invalidRomans = ['IIII', 'VV', 'XXXX', 'LL', 'CCCC', 'DD', 'MMMM']
+    invalidRomans.forEach(numeral => {
+      expect(function () {
+        romans.deromanize(numeral)
+      }).toThrow()
+    })
+  })
+
+  it('should handle edge cases correctly', function () {
+    expect(romans.deromanize('MCMXCIX')).toBe(1999)
+    expect(romans.deromanize('CDXLIV')).toBe(444)
+    expect(romans.romanize(3999)).toBe('MMMCMXCIX')
+  })
+
+  it('should reject invalid character combinations', function () {
+    const invalidCombos = ['IC', 'XM', 'XD', 'VC', 'IL', 'VX']
+    invalidCombos.forEach(combo => {
+      expect(function () {
+        romans.deromanize(combo)
+      }).toThrow()
+    })
+  })
 })
 
 function validateForType(arrayToCheck, expectedType) {
