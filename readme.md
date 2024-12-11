@@ -1,6 +1,6 @@
 <h1><a href="https://github.com/qbunt/romans" target="_blank"><img width="150" src="logo.png"></a></h1>
 
-Transform numbers into Roman numerals (and back again) with this zero-dependency library. Perfect for when X, V, and I are more your style than 1, 2, 3. As battle-tested as Spartacus in a gladiator match. 🏛️
+Transform numbers into Roman numerals (and back again) with this zero-dependency library. Perfect for when X, V, and I are more your style than 1, 2, 3. As [battle-tested](https://app.codecov.io/gh/qbunt/romans) as a gladiator. 🏛️
 
 [![quality](https://api.codacy.com/project/badge/Grade/3642e8e1b1b940ce8faa04bb7083f0fb)](https://app.codacy.com/app/qbunt/romans?utm_source=github.com&utm_medium=referral&utm_content=qbunt/romans&utm_campaign=Badge_Grade_Dashboard)
 [![tests](https://github.com/qbunt/romans/actions/workflows/nodejs.yml/badge.svg)](https://github.com/qbunt/romans/actions/workflows/nodejs.yml)
