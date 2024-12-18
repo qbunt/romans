@@ -1,3 +1,4 @@
+/* eslint-disable function-call-argument-newline */
 /**
  * @typedef {Object} RomanMap
  * @property {number} M
@@ -60,7 +61,7 @@ const romanize = (decimal) => {
     throw new Error('requires max value of less than 4000')
   }
 
-  // if input is padded with zeros, remove them
+  // If input is padded with zeros, remove them
   decimal = decimal.toString().replace(/^0+/, '')
 
   const result = []
@@ -90,13 +91,20 @@ const deromanize = (romanStr) => {
   }
 
   const invalidPatterns = {
-    'I': /I{4,}/,  // IIII or more
-    'V': /V{2,}/,  // VV or more
-    'X': /X{4,}/,  // XXXX or more
-    'L': /L{2,}/,  // LL or more
-    'C': /C{4,}/,  // CCCC or more
-    'D': /D{2,}/,  // DD or more
-    'M': /M{4,}/   // MMMM or more
+    // IIII or more
+    'I': /I{4,}/,
+    // VV or more
+    'V': /V{2,}/,
+    // XXXX or more
+    'X': /X{4,}/,
+    // LL or more
+    'L': /L{2,}/,
+    // CCCC or more
+    'C': /C{4,}/,
+    // DD or more
+    'D': /D{2,}/,
+    // MMMM or more
+    'M': /M{4,}/
   };
 
   for (const [_, pattern] of Object.entries(invalidPatterns)) {
