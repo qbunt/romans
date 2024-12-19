@@ -44,6 +44,8 @@ jobs:
       - name: Run the tests
         run: pnpm test -- --coverage
 
+      - uses: ArtiomTr/jest-coverage-report-action@v2
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
