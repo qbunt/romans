@@ -11,7 +11,7 @@ Transform ⚡ numbers into Roman numerals (and back again) with this zero-depend
 With [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), [pnpm](https://pnpm.io/), or [yarn](https://yarnpkg.com/) installed, run:
 
 ```shell
-$ pnpm add romans
+$ npm install romans
 ```    
 
 ## Usage 🧮 
