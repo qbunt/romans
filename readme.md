@@ -77,6 +77,10 @@ On the fence here, but mainly to support in older codebases that are CommonJS ba
 
 I value not having to set up typescript, and really, I do enjoy the simplicity of having a single library file. There are types and extensive JSDoc comments. Eventually, I'll cave and do multiple builds, but for now, this is fine. If you feel strongly about this decision, pull requests are open.
 
+> What's new in v3?
+
+Same great taste, API is 💯 identical, more tests, improved efficiency, improved types, **vastly** improved docs ⚔️
+
 ## Contributions 🤝
 
 If you'd like to contribute to this library, please [send a PR](https://github.com/qbunt/romans/pulls) or [file a new issue](https://github.com/qbunt/romans/issues). I aim to get PRs accepted in short order *should they align with the goals*. Also, be kind, again, this started as a joke. 
